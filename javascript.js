@@ -1,12 +1,10 @@
 
 
 function createDiv() {
-    const container = document.querySelector('.container');
     const newDiv = document.createElement('div');
 
     newDiv.classList.add('square');
-    newDiv.textContent = "swag";
-    container.appendChild(newDiv);
+    newDiv.textContent = 'div';
 
     return newDiv;
     
