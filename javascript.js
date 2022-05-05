@@ -14,7 +14,7 @@ function addDivToContainer() {
     const container = document.querySelector('.container');
     const ArrayOfDivs = [];
 
-    for (let x = 0; x < 255; x++) {
+    for (let x = 0; x < 256; x++) {
         ArrayOfDivs.push(createDiv());
         container.appendChild(ArrayOfDivs[x]);
     }
