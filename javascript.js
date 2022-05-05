@@ -1,4 +1,4 @@
-
+const container = document.querySelector('.container');
 
 function createDiv() {
     const newDiv = document.createElement('div');
@@ -11,7 +11,6 @@ function createDiv() {
 }
 
 function addDivToContainer() {
-    const container = document.querySelector('.container');
     const ArrayOfDivs = [];
 
     for (let x = 0; x < 256; x++) {
@@ -20,4 +19,13 @@ function addDivToContainer() {
     }
 }
 
+function changeColor(e) {
+    this.classList.add("scroll");
+}
+
 addDivToContainer();
+
+const divs = container.querySelectorAll('.square');
+divs.forEach(square => square.addEventListener('pointerover', changeColor));
+
+

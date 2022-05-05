@@ -1,5 +1,17 @@
+.container {
+    display: flex;
+    width: 1200px;
+    flex-flow: row wrap;
+}
+
 .square {
     background-color: black;
+    box-sizing: border-box;
+    border: 1px solid green;
     width: 75px;
     height: auto;
+}
+
+.scroll {
+    background-color: red;
 }
