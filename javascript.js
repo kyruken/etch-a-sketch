@@ -10,13 +10,26 @@ function createDiv() {
     
 }
 
-function addDivToContainer() {
+function setDimensions() {
+    let userInput = prompt("What dimensions would you like for the etch?");
+    addDivToContainer(userInput);
+
+}
+function addDivToContainer(dimensions) {
     const ArrayOfDivs = [];
 
+    if (dimensions > 0) {
+        for (let x = 0; x < dimensions; x++) {
+            ArrayOfDivs.push(createDiv());
+            container.appendChild(ArrayOfDivs[x]);
+        }
+        return;
+    }
     for (let x = 0; x < 256; x++) {
         ArrayOfDivs.push(createDiv());
         container.appendChild(ArrayOfDivs[x]);
     }
+    return;
 }
 
 function changeColor(e) {
