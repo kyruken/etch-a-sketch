@@ -22,6 +22,7 @@ function addDivToContainer(dimensions) {
         for (let x = 0; x < dimensions; x++) {
             ArrayOfDivs.push(createDiv());
             container.appendChild(ArrayOfDivs[x]);
+            selectAllDivs();
         }
         return;
     }
@@ -34,11 +35,15 @@ function addDivToContainer(dimensions) {
 
 function changeColor(e) {
     this.classList.add("scroll");
+    
+}
+
+function selectAllDivs() {
+    const divs = container.querySelectorAll('.square');
+    divs.forEach(square => square.addEventListener('pointerover', changeColor));
 }
 
 addDivToContainer();
 
-const divs = container.querySelectorAll('.square');
-divs.forEach(square => square.addEventListener('pointerover', changeColor));
-
+selectAllDivs();
 
