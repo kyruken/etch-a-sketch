@@ -1,3 +1,5 @@
+
+//Global variables
 const container = document.querySelector('.container');
 
 function createDiv() {
@@ -10,15 +12,21 @@ function createDiv() {
     
 }
 
+function replacePreviousDimensions() {
+
+}
+
 function setDimensions() {
     let userInput = prompt("What dimensions would you like for the etch?");
     addDivToContainer(userInput);
 
 }
 function addDivToContainer(dimensions) {
+
     const ArrayOfDivs = [];
 
     if (dimensions > 0) {
+        //Adding divs to container
         for (let x = 0; x < dimensions; x++) {
             ArrayOfDivs.push(createDiv());
             container.appendChild(ArrayOfDivs[x]);
