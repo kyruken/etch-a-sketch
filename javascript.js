@@ -26,11 +26,11 @@ function addDivToContainer(dimensions) {
         }
         return;
     }
-    // for (let x = 0; x < 256; x++) {
-    //     ArrayOfDivs.push(createDiv());
-    //     container.appendChild(ArrayOfDivs[x]);
-    // }
-    // return;
+    for (let x = 0; x < 256; x++) {
+        ArrayOfDivs.push(createDiv());
+        container.appendChild(ArrayOfDivs[x]);
+    }
+    return;
 }
 
 function changeColor(e) {
