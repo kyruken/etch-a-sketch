@@ -74,7 +74,7 @@ function addDivToContainer(number) {
     return;
 }
 
-function changeColor(e) {
+function changeColor() {
     this.classList.add("scroll");
     
 }
