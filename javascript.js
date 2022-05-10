@@ -12,7 +12,11 @@ function createDiv() {
     
 }
 
-function replacePreviousDimensions() {
+function deleteAllDivs() {
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 
 }
 
@@ -23,21 +27,22 @@ function setDimensions() {
 }
 function addDivToContainer(dimensions) {
 
-    const ArrayOfDivs = [];
-
     if (dimensions > 0) {
-        //Adding divs to container
+        //delete all the divs currently
+        deleteAllDivs();
+        //add new divs based on input
         for (let x = 0; x < dimensions; x++) {
-            ArrayOfDivs.push(createDiv());
-            container.appendChild(ArrayOfDivs[x]);
+            container.appendChild(createDiv());
             selectAllDivs();
         }
         return;
-    }
+     }
+
+     //Initializes website with 256 divs
     for (let x = 0; x < 256; x++) {
-        ArrayOfDivs.push(createDiv());
-        container.appendChild(ArrayOfDivs[x]);
+        container.appendChild(createDiv());
     }
+
     return;
 }
 
