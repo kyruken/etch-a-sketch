@@ -6,7 +6,7 @@ function createDiv() {
     const newDiv = document.createElement('div');
 
     newDiv.classList.add('square');
-    newDiv.textContent = 'div';
+    newDiv.textContent = '.';
 
     return newDiv;
     
@@ -59,8 +59,13 @@ function addDivToContainer(number) {
      }
 
      //Initializes website with 256 divs
+     newLineCounter = 255;
     for (let x = 0; x < 256; x++) {
         container.appendChild(createDiv());
+        if (newLineCounter % 16 === 0) {
+            container.appendChild(addNewLine());
+        }
+        newLineCounter--;
     }
 
     return;

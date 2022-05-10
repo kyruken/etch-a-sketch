@@ -8,7 +8,7 @@
     background-color: black;
     box-sizing: border-box;
     border: 1px solid green;
-    min-width: 75px;
+    flex: 1 1 0;
 }
 
 .scroll {
