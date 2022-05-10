@@ -14,3 +14,9 @@
 .scroll {
     background-color: red;
 }
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
