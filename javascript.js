@@ -29,12 +29,15 @@ function addNewLine() {
 }
 
 function setDimensions() {
-    let userInput = prompt("What dimensions would you like for the etch?");
+    let userInput = prompt("What dimensions would you like for the etch?(Not a number higher than 100)");
+    if (userInput > 100 || userInput < 0) {
+        alert("Invalid input. Please input a number between 1 and 100");
+        return;
+    }
     addDivToContainer(userInput);
 
 }
 function addDivToContainer(number) {
-
     let dimensions = number;
     dimensions = dimensions * number;
     if (dimensions > 0) {
